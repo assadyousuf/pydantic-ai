@@ -53,7 +53,7 @@ Either way, running `clai` will start an interactive session where you can chat 
 ## Help
 
 ```
-usage: clai [-h] [-m [MODEL]] [-a AGENT] [-l] [-t [CODE_THEME]] [--no-stream] [--version] [prompt]
+Usage: clai [OPTIONS] [PROMPT]
 
 PydanticAI CLI v...
 
@@ -62,18 +62,13 @@ Special prompts:
 * `/markdown` - show the last markdown output of the last question
 * `/multiline` - toggle multiline mode
 
-positional arguments:
-  prompt                AI Prompt, if omitted fall into interactive mode
-
-options:
-  -h, --help            show this help message and exit
-  -m [MODEL], --model [MODEL]
-                        Model to use, in format "<provider>:<model>" e.g. "openai:gpt-4o" or "anthropic:claude-3-7-sonnet-latest". Defaults to "openai:gpt-4o".
-  -a AGENT, --agent AGENT
-                        Custom Agent to use, in format "module:variable", e.g. "mymodule.submodule:my_agent"
-  -l, --list-models     List all available models and exit
-  -t [CODE_THEME], --code-theme [CODE_THEME]
-                        Which colors to use for code, can be "dark", "light" or any theme from pygments.org/styles/. Defaults to "dark" which works well on dark terminals.
-  --no-stream           Disable streaming from the model
-  --version             Show version and exit
+Options:
+  -m, --model MODEL   Model to use, in format "<provider>:<model>" e.g. "openai:gpt-4o" or "anthropic:claude-3-7-sonnet-latest". Defaults to "openai:gpt-4o".
+  -a, --agent AGENT   Custom Agent to use, in format "module:variable", e.g. "mymodule.submodule:my_agent"
+  -l, --list-models   List all available models and exit
+  -t, --code-theme TEXT
+                      Which colors to use for code, can be "dark", "light" or any theme from pygments.org/styles/. Defaults to "dark" which works well on dark terminals.
+  --no-stream         Disable streaming from the model
+  --version           Show version and exit
+  -h, --help          Show this message and exit.
 ```
